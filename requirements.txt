@@ -1,3 +1,0 @@
-aiogram==3.30.0
-aiosqlite
-python-dotenv
