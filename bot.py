@@ -179,7 +179,7 @@ async def receive_code(message: Message, state: FSMContext) -> None:
     if sent_msg_id is not None:
         user_by_admin_msg[sent_msg_id] = user.id
 
-    await message.answer("✅ کدت ارسال شد! منتظر جواب باشم.")
+    await message.answer("✅ کدت ارسال شد! منتظر جواب باش.")
     await state.clear()
 
 
@@ -195,7 +195,7 @@ async def admin_reply(message: Message) -> None:
     try:
         if message.text:
             await bot.send_message(
-                user_id, f"💬 پاسخ ادمین:\n\n{message.text}"
+                user_id, f"💬 پاسخ:\n\n{message.text}"
             )
         else:
             await bot.copy_message(
