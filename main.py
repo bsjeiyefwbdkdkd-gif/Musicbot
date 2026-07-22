@@ -123,7 +123,7 @@ def main_keyboard() -> InlineKeyboardMarkup:
         inline_keyboard=[
             [
                 InlineKeyboardButton(
-                    text="ارسال کد",
+                    text="(^.^)ارسال کد",
                     callback_data="send_code",
                     style="primary",  # 🔵 blue — Bot API 9.4
                 )
@@ -242,7 +242,7 @@ async def receive_code(message: Message, state: FSMContext) -> None:
         if sent_msg_id is not None:
             remember_admin_msg(sent_msg_id, user.id)
 
-        await message.answer("✅ کدت ارسال شد! منتظر جواب باشم.")
+        await message.answer("✅ کدت ارسال شد! منتظر جواب باش.")
         await state.clear()
     except Exception:
         logger.exception("receive_code failed")
@@ -264,7 +264,7 @@ async def admin_reply(message: Message) -> None:
 
         if message.text:
             await bot.send_message(
-                user_id, f"💬 پاسخ ادمین:\n\n{message.text}"
+                user_id, f"💬 پاسخ:\n\n{message.text}"
             )
         else:
             await bot.copy_message(
