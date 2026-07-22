@@ -123,7 +123,7 @@ def main_keyboard() -> InlineKeyboardMarkup:
         inline_keyboard=[
             [
                 InlineKeyboardButton(
-                    text="(^.^)ارسال کد",
+                    text="ارسال کد (^-^)",
                     callback_data="send_code",
                     style="primary",  # 🔵 blue — Bot API 9.4
                 )
